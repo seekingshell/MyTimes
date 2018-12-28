@@ -11,11 +11,11 @@ header {
   flex-direction: row;
   margin: 10px auto;
   padding-bottom: 10px;
-  z-index: 10
+  z-index: 10;
 }
 
 .logo-container {
-  display: inline-flex;
+  display: flex;
   color: MediumAquamarine;
   align-items: center;
   flex-direction: row;
@@ -25,7 +25,6 @@ header {
 }
 
 .logo-element {
-  display: flex;
   padding: 0 5px;
 }
 
@@ -37,7 +36,6 @@ nav {
 }
 
 .nav-element {
-  display: inline-block;
   color: black;
   padding: 0 15px;
 }
