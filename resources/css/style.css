@@ -1,0 +1,83 @@
+body {
+  margin: 0 auto;
+}
+header {
+  display: inline-flex;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  position: fixed;
+  flex-direction: row;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  z-index: 10
+}
+
+.logo-container {
+  display: inline-flex;
+  color: MediumAquamarine;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 30px;
+  flex-grow: 5;
+  border: 1px solid black;
+}
+
+.logo-element {
+  display: flex;
+  padding: 0 5px;
+}
+
+nav {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 30px;
+}
+
+.nav-element {
+  display: flex;
+  color: black;
+  padding: 0 15px;
+}
+
+main {
+  display: inline-flex;
+  border: 1px solid black;
+  position: relative;
+  top: 85px;
+  width: 75%;
+  height: auto;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  left: 50px;
+}
+
+.column {
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid black;
+  top: 35px;
+
+}
+
+.column .large {
+  border: 1px solid black;
+  display: flex;
+  width: 630px;
+  flex-wrap: wrap;
+}
+
+.column .medium {
+  border: 1px solid black;
+  display: flex;
+  width: 300px;
+}
+
+.column .small {
+  border: 1px solid black;
+  display: flex;
+  width: 240px;
+}
