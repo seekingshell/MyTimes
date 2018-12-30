@@ -1,27 +1,30 @@
 body {
+  display: flex;
   margin: 0 auto;
+  justify-content: center;
 }
 header {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 10;
   font-family: Verdana;
   font-size: 14px;
   font-weight: bold;
-  width: 100%;
-  position: fixed;
-  flex-direction: row;
-  margin: 10px auto;
-  padding-bottom: 10px;
-  z-index: 10;
+  background-color: white;
+  border-bottom: 1px solid black;
 }
 
 .logo-container {
-  display: flex;
-  color: MediumAquamarine;
-  align-items: center;
-  flex-direction: row;
-  padding-left: 30px;
-  flex-grow: 5;
   border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 5;
+  align-items: center;
+  padding-left: 25px;
+  color: MediumAquamarine;
 }
 
 .logo-element {
@@ -30,65 +33,67 @@ header {
 
 nav {
   display: flex;
-  align-items: center;
   flex-direction: row;
+  align-items: center;
   padding-right: 30px;
 }
 
 .nav-element {
-  color: black;
+  display: inline-block;
   padding: 0 15px;
+  color: black;
 }
 
 main {
-  display: inline-flex;
   border: 1px solid black;
+  display: flex;
   position: relative;
-  top: 85px;
-  height: 100%;
-  justify-content: space-around;
-  flex-direction: row;
-  align-content: center;
+  margin-top: 80px;
+  max-width: 1260px;
 }
 
 .column {
-  display: inline-flex;
-  flex-direction: column;
   border: 1px solid black;
-  top: 35px;
-
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 35px;
+  margin-right: 27px;
 }
 
 .column .large {
-  border: 1px solid black;
-  display: flex;
   max-width: 630px;
-  flex-wrap: wrap;
 }
 
 .column .medium {
-  border: 1px solid black;
-  display: flex;
   max-width: 300px;
 }
 
 .column .small {
-  border: 1px solid black;
-  display: flex;
   max-width: 240px;
 }
 
-.story-main {
+.story {
   border: 1px solid black;
-  width: 100%;
+}
+
+.story-main {
+  display: block;
+  border: 1px solid black;
 }
 
 .story-earth {
+  display: block;
   border: 1px solid black;
-  width: 100%;
 }
 
 .story-camera {
+  display: block;
   border: 1px solid black;
-  width: 100%;
+}
+
+.story-cat {
+  display: block;
+  border: 1px solid black;
 }
