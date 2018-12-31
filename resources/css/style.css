@@ -1,11 +1,11 @@
 body {
-  display: flex;
   margin: 0 auto;
-  justify-content: center;
+  position: absolute;
 }
 header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   position: fixed;
   padding: 10px 0;
   width: 100%;
@@ -17,21 +17,20 @@ header {
   border-bottom: 1px solid black;
 }
 
-.logo-container, nav {
-  display: flex;
+.logo-container, .nav-top, nav {
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
 }
 
+.nav-top {
+  padding-right: 30px;
+}
+
 .logo-container {
-  border: 1px solid black;
   flex-grow: 5;
   padding-left: 25px;
   color: MediumAquamarine;
-}
-
-nav {
-  padding-right: 30px;
 }
 
 .logo-element {
@@ -45,49 +44,65 @@ nav {
 }
 
 main {
-  border: 1px solid black;
   display: flex;
+  justify-content: center;
   position: relative;
-  margin-top: 80px;
-  max-width: 1260px;
+  margin: 80px auto;
+  min-width: 1260px;
+  min-height: 1200px;
   font-family: Georgia;
   font-size: 17px;
   color: black;
 }
 
-.column {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+.column-large, .column-medium, .column-small {
   position: relative;
   margin-top: 35px;
   margin-right: 27px;
-  justify-content: space-between;
 }
 
-.column .large {
+.column-large {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-between;
   max-width: 630px;
 }
 
-.column .medium {
+.column-medium {
+  display: flex;
+  align-self: flex-start;
+  align-content: space-between;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  min-height: 1000px;
   max-width: 300px;
 }
 
-.column .small {
+.column-small {
+  display: flex;
+  align-self: flex-start;
+  flex-flow: column wrap;
   max-width: 240px;
 }
 
-.story {
-  border: 1px solid black;
+.story-main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.story, .story-slim {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-slim {
+  max-width: 290px;
 }
 
 .headline, .headline-main {
   display: flex;
   font-weight: bold;
-  color: white;
 }
 
 .headline {
@@ -102,32 +117,82 @@ main {
   display: flex;
   background: url("../images/img-story-main.png");
   height: 300px;
-  border: 1px solid black;
+  color: white;
 }
 
 .story-image-earth, .story-image-camera, .story-image-cat {
-  display: flex;
+  display: inline-flex;
   //align-items: center;
   justify-content: center;
   text-align: center;
-  height: 300px;
+  color: white;
 }
 
 .story-image-earth {
   background: url("../images/img-story-2.png");
-  border: 1px solid black;
+  max-width: 290px;
+  min-height: 290px;
 }
 
 .story-image-camera {
   background: url("../images/img-story-3.png");
-  border: 1px solid black;
+  max-width: 290px;
+  min-height: 290px;
 }
 
 .story-image-cat {
   background: url("../images/img-story-1.png");
-  border: 1px solid black;
+  height: 300px;
 }
 
-.news-bites {
-  border: 1px solid black;
+.news-bites-headline {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  height: 60px;
+}
+
+.news-bites-box {
+  display: flex;
+  align-items: center;
+  background-color: WhiteSmoke;
+  font-family: Verdana;
+  font-size: 12px;
+  color: DimGray;
+  border-bottom: 1px solid black;
+  width: 100%;
+  min-height: 45px;
+}
+
+.news-bites-box-item {
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 15px;
+  max-width: 200px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: MediumAquamarine;
+  font-family: Verdana;
+  font-size: 12px;
+  min-height: 300px;
+  width: 100%;
+}
+
+.footer-item {
+  display: inline-flex;
+  margin: 10px auto;
+}
+
+.footer-my-times-logo {
+  font-family: Georgia;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  padding-right: 15px;
 }
