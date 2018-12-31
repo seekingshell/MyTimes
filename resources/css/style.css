@@ -115,19 +115,17 @@ main {
   font-size: 40px;
 }
 
-.story-image-main {
-  display: flex;
-  background: url("../images/img-story-main.png");
-  height: 300px;
-  color: white;
-}
-
-.story-image-earth, .story-image-camera, .story-image-cat {
+.story-image-main, .story-image-earth, .story-image-camera, .story-image-cat {
   display: inline-flex;
-  //align-items: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+}
+
+.story-image-main {
+  background: url("../images/img-story-main.png");
+  height: 300px;
 }
 
 .story-image-earth {
